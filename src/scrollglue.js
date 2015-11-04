@@ -67,7 +67,9 @@
 
                     function scrollIfGlued() {
                         if(activationState.getValue() && !direction.isAttached(el)){
-                            direction.scroll(el);
+                            $timeout(function() {
+                                direction.scroll(el);
+                            }, 0);
                         }
                     }
 
